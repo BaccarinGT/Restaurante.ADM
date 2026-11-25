@@ -1,0 +1,245 @@
+ @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+        body {
+            background-color: #F5F4F2;
+            margin: 0;
+            padding: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* descrição e preços */
+        p,
+        span {
+            color: #000000;
+        }
+
+        /* Fonte dos títulos */
+        h1,
+        h2,
+        h3 {
+            color: #BAB095;
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+        }
+
+        .menu {
+            padding: 15px;
+            justify-self: center;
+            text-align: center;
+            background-color: #F5F4F2;
+            margin: 20px;
+            border-radius: 50px;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.365);
+            top: 0;
+        }
+
+
+        .menu button {
+            padding: 7px;
+            font-size: 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+        }
+
+        .menu button a {
+            position: relative;
+            color: #49382C;
+            text-decoration: none;
+        }
+
+        .menu button a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #BAA88D;
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        .menu button a:hover::after {
+            width: 100%;
+        }
+
+        .pedidos {
+            justify-self: center;
+
+            box-shadow: 0px 0px 25px #80664E;
+            margin: 50px;
+            border-radius: 50px;
+            height: 500px;
+            width: 50%;
+        }
+
+        .tabela {
+            justify-self: center;
+        }
+
+        .finalizar button {
+            background-color: transparent;
+            padding: 8px;
+            box-shadow: 0px 0px 5px #80664E;
+            font-size: 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            border: none;
+            color: #80664E;
+        }
+
+        .text {
+            text-align: center;
+            margin: 45px 0 30px;
+        }
+
+        .text h1 {
+            font-size: 38px;
+            color: #493629;
+            letter-spacing: 1px;
+        }
+
+        /* Caixa principal */
+
+        .pedidos {
+            margin: 0 auto 60px;
+            padding: 35px;
+            width: 55%;
+            max-width: 750px;
+            min-height: 400px;
+            box-sizing: border-box;
+
+            background-color: #FFFDF8;
+            border: 1px solid #E6D7C5;
+            border-radius: 25px;
+
+            box-shadow: 0 8px 25px rgba(90, 65, 43, 0.12);
+        }
+
+        /* Lista dos pratos */
+
+        .tabela {
+            width: 100%;
+        }
+
+        #lista-pedidos {
+            max-height: 300px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        /* Cada prato */
+
+        .item-pedido {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 18px 10px;
+            border-bottom: 1px solid #E9DED1;
+        }
+
+        .item-pedido h3 {
+            font-size: 17px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .item-pedido p {
+            font-size: 16px;
+            font-weight: bold;
+            color: #80664E;
+            margin: 0;
+        }
+
+        /* Mensagem de pedido vazio */
+
+        #pedido-vazio {
+            text-align: center;
+            padding: 40px 10px;
+            color: #9A8877;
+            font-size: 16px;
+        }
+
+        /* Resumo */
+
+        .resumo {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 25px;
+            padding: 15px 10px;
+            border-top: 2px solid #D8C5AF;
+        }
+
+        .resumo h3 {
+            font-size: 22px;
+            color: #493629;
+        }
+
+        /* Botão finalizar */
+
+        .finalizar {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .finalizar button {
+            background-color: #80664E;
+            color: #FFFDF8;
+
+            padding: 13px 35px;
+            border: none;
+            border-radius: 30px;
+
+            font-size: 16px;
+            font-weight: 600;
+
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .finalizar button:hover {
+            background-color: #604832;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(90, 65, 43, 0.2);
+        }
+
+
+
+        @media (max-width: 768px) {
+
+            .pedidos {
+                width: 90%;
+                padding: 22px;
+            }
+
+            .text h1 {
+                font-size: 30px;
+            }
+
+            .item-pedido h3 {
+                font-size: 14px;
+            }
+
+            .item-pedido p {
+                font-size: 14px;
+            }
+
+            .resumo h3 {
+                font-size: 19px;
+            }
+
+        }
