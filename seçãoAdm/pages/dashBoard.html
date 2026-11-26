@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashBoard</title>
+    <style>
+       
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        body {
+            margin: 0;
+            margin-left: 200px;
+            /* mesma largura do menu, para não cobrir o conteúdo */
+            font-family: 'Playfair Display', serif;
+        }
+
+        .menu {
+            align-content: center;
+            position: fixed;
+            /* mantém o menu parado ao rolar a página */
+            top: 0;
+            left: 0;
+            /* encosta no lado esquerdo */
+            width: 200px;
+            height: 100vh;
+            /* ocupa toda a altura da tela */
+            background: #06141B;
+        }
+
+        .menu nav {
+            justify-self: center;
+            display: flex;
+            flex-direction: column;
+            /* coloca os itens na vertical */
+            gap: 40px;
+            list-style: none;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .menu button {
+
+            background-color: white;
+            border-radius: 30px;
+            border: none;
+            transition: background-color 0.6s ease;
+        }
+
+        .menu button:hover {
+            background-color: #4a5c6a;
+        }
+
+        .menu a {
+            display: block;
+            /* faz o link ocupar a largura disponível */
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+            transition: color 0.6s ease;
+        }
+
+        .menu a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header class="menu">
+        <nav>
+            <button><a href="../../seçãoCliente/index.html">Exit</a></button>
+            <button><a href="pedidos.html">Pedidos</a></button>
+            <button><a href="estoque.html">Estoque</a></button>
+            <button><a href="chekin.html">Chekin</a></button>
+        </nav>
+    </header>
+</body>
+</html>

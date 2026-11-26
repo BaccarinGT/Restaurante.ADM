@@ -1,0 +1,208 @@
+   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --fundo: #F5F4F2;
+            --card: #FFFFFF;
+            --texto: #49382C;
+            --slider: #BAA88D;
+            --slidert: #49382C;
+            --borda: #80664E;
+            --bordat: #49382C;
+
+        }
+
+        .dark {
+            --fundo: #253745;
+            --card: #06141b;
+            --textoh1: #ccd0cf;
+            --textoh2: #9ba8ab;
+            --slider: #4a5c6a;
+            --slidert: #253745;
+            --borda: #4a5c6a;
+            --bordat: #253745;
+        }
+
+        body {
+            margin: 0;
+            margin-left: 200px;
+            /* mesma largura do menu, para não cobrir o conteúdo */
+            font-family: 'Playfair Display', serif;
+            background-color: var(--fundo);
+            color: var(--texto);
+            transition: 0.3s;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* MENU SUPERIOR */
+        .topbar {
+            height: 75px;
+            background-color: var(--card);
+            border-bottom: 1px solid var(--borda);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 30px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        /* PERFIL */
+        .perfil {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .perfil button {
+            background-color: var(--borda);
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.6s ease;
+        }
+
+        .perfil button:hover {
+            background-color: var(--bordat);
+        }
+
+        .perfil a {
+            text-decoration: none;
+            color: #F5F4F2;
+        }
+
+        .toggle {
+            position: relative;
+            display: inline-block;
+            width: 55px;
+            height: 28px;
+        }
+
+        .toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            inset: 0;
+            background-color: var(--slider);
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .slider::before {
+            content: "";
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        input:checked+.slider {
+            background-color: var(--slidert);
+        }
+
+        input:checked+.slider::before {
+            transform: translateX(27px);
+        }
+
+        .menu {
+            align-content: center;
+            position: fixed;
+            /* mantém o menu parado ao rolar a página */
+            top: 0;
+            left: 0;
+            /* encosta no lado esquerdo */
+            width: 200px;
+            height: 100vh;
+            /* ocupa toda a altura da tela */
+            background-color: var(--card);
+            border-bottom: 1px solid var(--borda);
+            box-shadow: 0 0 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .menu nav {
+            justify-self: center;
+            display: flex;
+            flex-direction: column;
+            /* coloca os itens na vertical */
+            gap: 40px;
+            list-style: none;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .menu button {
+
+            background-color: var(--borda);
+            border-radius: 30px;
+            border: none;
+            transition: background-color 0.6s ease;
+        }
+
+        .menu button:hover {
+            background-color: var(--bordat);
+        }
+
+        .menu a {
+            display: block;
+            /* faz o link ocupar a largura disponível */
+            padding: 10px;
+            color: #F5F4F2;
+            text-decoration: none;
+            transition: color 0.6s ease;
+        }
+
+        .menu a:hover {
+            color: #F5F4F2;
+        }
+
+        section {
+            min-height: calc(100vh - 75px);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Mensagem {
+            box-shadow: 0 0 10px var(--borda);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* Centraliza verticalmente */
+            align-items: center;
+            /* Centraliza horizontalmente */
+            height: 250px;
+            width: 400px;
+            border-radius: 25px;
+
+
+        }
+
+        .Mensagem h1,
+        .Mensagem h2,
+        .Mensagem p {
+            font-size: 35px;
+            margin: 0;
+        }
+
+        .Mensagem h1,
+        h3,
+        span {
+            color: var(--textoh1);
+        }
+
+        .Mensagem h2,
+        .Mensagem p {
+            color: var(--textoh2);
+            
+        }
