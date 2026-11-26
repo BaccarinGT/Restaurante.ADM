@@ -1,31 +1,233 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login Administrativo</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+        body {
+            display: flex;
+            background-color: #F5F4F2;
+            margin: 0;
+            padding: 0;
+            font-family: 'Playfair Display', serif;
+
+
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .menu {
+
+            position: absolute;
+            top: 20px;
+            left: 25px;
+
+            padding: 10px 20px;
+            text-align: center;
+            background-color: #F5F4F2;
+            border-radius: 50px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .menu button {
+            font-size: 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+        }
+
+        .menu button a {
+            position: relative;
+            color: #49382C;
+            text-decoration: none;
+        }
+
+        .menu button a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #BAA88D;
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+
+        .menu button a:hover::after {
+            width: 100%;
+        }
+
+
+
+        */ .painel {
+            padding: 45px 55px;
+            width: 450px;
+            min-height: 380px;
+
+            background: linear-gradient(145deg,
+                    #FDFCFA,
+                    #F0EBE4);
+
+            border: 1px solid rgba(128, 102, 78, 0.15);
+            border-radius: 25px;
+
+            box-shadow: 0px 15px 40px rgba(73, 56, 44, 0.12);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Títulos */
+        .container {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .container h2 {
+            color: #80664E;
+            font-size: 19px;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .container h1 {
+            color: #49382C;
+            font-size: 29px;
+            font-weight: 600;
+            margin: 5px 0 0;
+        }
+
+        .container p {
+            color: #A69A8D;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+        }
+
+        /* Formulário */
+        .painel form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .painel input {
+            display: block;
+            width: 100%;
+            max-width: 330px;
+            box-sizing: border-box;
+
+            padding: 13px 8px;
+            margin: 0;
+
+            border: none;
+            border-bottom: 1.5px solid #BAA88D;
+
+            background: transparent;
+            outline: none;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            color: #49382C;
+
+            transition: border-color 0.3s ease;
+        }
+
+        .painel input:focus {
+            border-bottom: 2px solid #80664E;
+        }
+
+        .painel input::placeholder {
+            color: #A69A8D;
+        }
+
+        /* Botão */
+        .logar {
+            display: block;
+            width: 100%;
+            max-width: 330px;
+
+            margin: 30px auto 0;
+            padding: 13px;
+
+            background: #80664E;
+            color: #FFFDF8;
+
+            border: none;
+            border-radius: 30px;
+
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .logar:hover {
+            background: #604832;
+            box-shadow: 0 6px 15px rgba(90, 65, 43, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            .painel {
+                width: calc(100% - 40px);
+                padding: 35px 25px;
+                box-sizing: border-box;
+            }
+
+            .container h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
+    <header class="menu">
+        <nav class="menu-button">
+            <button><a href="../index.html">voltar</a></button>
+        </nav>
+    </header>
 
 
-    <section>
-        <h2>Bem-Vindo ao</h2>
-        <p><h1>Login Administrativo</h1></p>
-    
-    <form id="formLogin">
 
-    <input type="email" id="email"
-        placeholder="E-mail">
+    <section class="painel">
 
-    <input type="password" id="senha"
-        placeholder="Senha">
+        <div class="container">
+            <h2>Bem-Vindo ao</h2>
+            <p>
+            <h1>Login Administrativo</h1>
+            </p>
+            <h2>Acesso exclusivo para funcionários!!</h2>
+        </div>
 
-    <button type="submit">
-        Entrar
-    </button>
+        <form id="formLogin">
+
+            <input type="email" id="email" placeholder="E-mail" required>
+
+            <input type="password" id="senha" placeholder="Senha" required>
+
+            <button class="logar" type="submit">
+                Entrar
+            </button>
+        </form>
+
     </section>
 
-</form>
+    <script src="login.js"></script>
 </body>
+
 </html>
